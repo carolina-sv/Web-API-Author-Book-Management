@@ -29,27 +29,28 @@ It demonstrates the use of **Controllers, Services, Interfaces, Models, and EF C
 
 ## 📂 Project Structure
 
+```plaintext
 WebAPI/
 ├── Controllers/
-│ └── AutorController.cs # API endpoints for authors
+│   └── AutorController.cs       # API endpoints for authors
 │
 ├── Data/
-│ ├── AppDbContext.cs # EF Core DbContext
-│ └── Migrations/ # Database migrations
+│   ├── AppDbContext.cs          # EF Core DbContext
+│   └── Migrations/              # Database migrations
 │
 ├── Models/
-│ ├── AutorModel.cs # Author entity
-│ ├── LivroModel.cs # Book entity
-│ └── ResponseModel.cs # Standard API response wrapper
+│   ├── AutorModel.cs            # Author entity
+│   ├── LivroModel.cs            # Book entity
+│   └── ResponseModel.cs         # Standard API response wrapper
 │
 ├── Services/
-│ └── Autor/
-│ ├── AutorInterface.cs # Author service contract
-│ └── AutorService.cs # Author service implementation
+│   └── Autor/
+│       ├── AutorInterface.cs    # Author service contract
+│       └── AutorService.cs      # Author service implementation
 │
-├── Program.cs # API configuration
-├── appsettings.json # App configuration
-└── WebAPI.http # HTTP test file 
+├── Program.cs                   # API configuration
+├── appsettings.json             # App configuration
+└── WebAPI.http                  # HTTP test file
 
 ---
 
