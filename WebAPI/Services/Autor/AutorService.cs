@@ -43,9 +43,22 @@ namespace WebAPI.Services.Autor
         }
 
 
-        public Task<ResponseModel<AutorModel>> BuscarAutorPorIdLivro(int idLivro)
+        public async Task<ResponseModel<AutorModel>> BuscarAutorPorIdLivro(int idLivro)
         {
-            throw new NotImplementedException();
+
+            ResponseModel<AutorModel> resposta = new ResponseModel<AutorModel>();
+            try
+            {
+                var autor = await _context.Livros.Include(a => a.Autor).FirstOrDefaultAsync(LivroBanco);
+               
+                // parou o vídeo em 1h02
+            }
+            catch (Exception ex)
+            {
+                resposta.Mensagem = ex.Message;
+                resposta.Status = false;
+                return resposta;
+            }
         }
 
         public async Task<ResponseModel<List<AutorModel>>> ListarAutores()
