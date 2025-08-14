@@ -29,7 +29,7 @@ It demonstrates the use of **Controllers, Services, Interfaces, Models, and EF C
 
 ## 📂 Project Structure
 
-```plaintext
+
 WebAPI/
 ├── Controllers/
 │   └── AutorController.cs       # API endpoints for authors
