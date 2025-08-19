@@ -49,10 +49,22 @@ namespace WebAPI.Services.Autor
             ResponseModel<AutorModel> resposta = new ResponseModel<AutorModel>();
             try
             {
-                var autor = await _context.Livros.Include(a => a.Autor).FirstOrDefaultAsync(LivroBanco);
+                var livro = await _context.Livros
+                    .Include(a => a.Autor)
+                    .FirstOrDefaultAsync(livroBanco => livroBanco.Id == idLivro);
                
-                // parou o vídeo em 1h02
+                if(livro == null)
+                {
+                    resposta.Mensagem = "Nenhum registro localizado.";
+                    return resposta;
+                }
+
+                resposta.Dados = livro.Autor;
+                resposta.Mensagem = "Autor do livro localizado com sucesso!";
+                return resposta;
+
             }
+
             catch (Exception ex)
             {
                 resposta.Mensagem = ex.Message;
