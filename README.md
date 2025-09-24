@@ -3,6 +3,8 @@
 A simple yet scalable **.NET 6 Web API** for managing authors and books, designed with a clean architecture pattern.  
 It demonstrates the use of **Controllers, Services, Interfaces, Models, and EF Core** for a structured, maintainable backend.
 
+<img width="990" height="1067" alt="WebApi" src="https://github.com/user-attachments/assets/1a415608-d6cc-423e-8066-b740994efc04" />
+
 ---
 
 ## 🚀 Features
